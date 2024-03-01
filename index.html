@@ -12,11 +12,131 @@
     <!-- TailwindCSS and Daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
-    <h1>Hello World</h1>
+<body class="bg-[#F6F6F6]">
+    <header>
+        <!--Top Nav bar -->
+        <div class="navbar  border-b-2">
+            <div class="flex-1">
+                <a class="text-xl font-playfair"><span class="bg-[#5D5FEF] text-[#F8F8F8] rounded-md p-3">News</span>
+                    Portal</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+
+                </div>
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mid position nav bar -->
+        <div class="flex justify-center gap-2 my-5">
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+            <div>
+                <button class="btn w-16 h-2">Home</button>
+            </div>
+        </div>
+        <div class="container mx-auto max-w-[1166px]  border-2 rounded-lg my-5 bg-white">
+            <p class="text-left pl-4 py-4 font-roboto">4 items found for category Entertainment</p>
+        </div>
+    </header>
+    <main class="min-h-screen">
+        <!-- Sort Container -->
+        <div class="flex justify-between px-4">
+            <div class="join flex items-center gap-3">
+                <div class="join-item">Sort By View:</div>
+                <div class="join-item">
+                    <select class="select select-bordered  max-w-xs">
+                        <option selected>Default</option>
+                        <option>Normal Apple</option>
+                        <option>Normal Orange</option>
+                        <option>Normal Tomato</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Sort with Btn -->
+            <div class=" flex items-center gap-3">
+                <div>
+                    <button class="btn btn-active btn-primary">Today’s Pick</button>
+
+                </div>
+                <div>
+                    <button class="btn btn-outline btn-primary">Trending</button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Dynamic news card -->
+        <div>
+            <div class="my-10 mx-auto container">
+                <div class="card card-side bg-base-100 shadow-xl w-full">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+                            class="w-96" alt="Movie" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">The best fashion influencers to follow for sartorial inspiration</h2>
+                        <p>From our favourite UK influencers to the best missives from Milan and the coolest New
+                            Yorkers, read on some of the best fashion blogs out there, and for even more inspiration, do
+                            head to our separate black fashion influencer round-up.
+
+                            Fancy some shopping deals? Check out these amazing sales: Zara Black Friday, ASOS Black
+                            Friday, Missoma Black Friday and Gucci Black Friday...</p>
+                        <div class="flex justify-between items-center">
+                            <div class="card-actions justify-start">
+                                <div class="avatar">
+                                    <div class="w-16 rounded-full">
+                                      <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                    </div>
+                                  </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-actions justify-end">
+                                <button class="btn text-blue-600 font-semibold"><i
+                                        class='bx bx-right-arrow-alt text-3xl'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer footer-center p-4 bg-white">
+        <aside>
+            <p class="text-[#949494] font-playfair text-xl font-bold">Copyright 2024 News Portal</p>
+        </aside>
+    </footer>
 </body>
 
 </html>
