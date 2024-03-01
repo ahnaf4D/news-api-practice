@@ -39,37 +39,11 @@
             </div>
         </div>
         <!-- Mid position nav bar -->
-        <div class="flex justify-center gap-2 my-5">
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
-            <div>
-                <button class="btn w-16 h-2">Home</button>
-            </div>
+        <div class="flex justify-center gap-2 my-5" id="md-nav-parent">
+           <button class="btn">Home</button>
         </div>
         <div class="container mx-auto max-w-[1166px]  border-2 rounded-lg my-5 bg-white">
-            <p class="text-left pl-4 py-4 font-roboto">4 items found for category Entertainment</p>
+            <p class="text-left pl-4 py-4 font-roboto"><span id="server-response-value">0</span> items found for category <span id="category-name">Category Name</span></p>
         </div>
     </header>
     <main class="min-h-screen">
@@ -99,9 +73,9 @@
             </div>
         </div>
         <!-- Dynamic news card -->
-        <div>
-            <div class="my-10 mx-auto container">
-                <div class="card card-side bg-base-100 shadow-xl w-full">
+  
+            <div class="my-10 mx-auto container flex flex-col gap-6" id="dynamic-news-card-container">
+                <!-- <div class="card card-side bg-base-100 shadow-xl w-full">
                     <figure><img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
                             class="w-96" alt="Movie" /></figure>
                     <div class="card-body">
@@ -127,16 +101,17 @@
                                         class='bx bx-right-arrow-alt text-3xl'></i></button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-            </div>
-        </div>
+        
+    
     </main>
     <footer class="footer footer-center p-4 bg-white">
         <aside>
             <p class="text-[#949494] font-playfair text-xl font-bold">Copyright 2024 News Portal</p>
         </aside>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
