@@ -2,6 +2,7 @@ const dynamicBtnContainer = document.getElementById('md-nav-parent');
 const serverResValue = document.getElementById('server-response-value');
 const categoryNames = document.getElementById('category-name');
 const dynamicCardContainer = document.getElementById('dynamic-news-card-container');
+const dataNotFound = document.getElementById('not-found-image');
 const fetchCatagories = async () => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/categories`);
     const data = await res.json();
@@ -31,6 +32,12 @@ const fetchDataByCategory = async (categoryId, categoryName) => {
 }
 const displayCategoriesData = (categoriesData) => {
     dynamicCardContainer.textContent = ' ';
+    if(categoriesData.length == 0){
+        dataNotFound.classList.remove('hidden');
+    }
+    else{
+        dataNotFound.classList.add('hidden');
+    }
     categoriesData.forEach(element => {
         console.log(element);
         const createDynamicCard = document.createElement('div');
