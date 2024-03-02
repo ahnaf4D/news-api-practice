@@ -32,39 +32,41 @@ const fetchDataByCategory = async (categoryId, categoryName) => {
 }
 const displayCategoriesData = (categoriesData) => {
     dynamicCardContainer.textContent = ' ';
-    if(categoriesData.length == 0){
+    if (categoriesData.length == 0) {
         dataNotFound.classList.remove('hidden');
     }
-    else{
+    else {
         dataNotFound.classList.add('hidden');
-    }
-    categoriesData.forEach(element => {
-        console.log(element);
-        const createDynamicCard = document.createElement('div');
-        createDynamicCard.classList = `card card-side bg-base-100 shadow-xl w-full`;
-        createDynamicCard.innerHTML = `
-            <figure><img src="${element.image_url}"
-            class="w-96" alt="Movie" /></figure>
-    <div class="card-body">
-        <h2 class="card-title">${element.title}</h2>
-        <p class="max-w-[826px]">${element.details}</p>
-        <div class="flex justify-between items-center">
-            <div class="card-actions justify-start">
-                <div class="avatar">
-                    <div class="w-16 rounded-full">
-                      <img src="${element.author.img}" />
+        categoriesData.forEach(element => {
+            console.log(element);
+            const createDynamicCard = document.createElement('div');
+            createDynamicCard.classList = `card card-side bg-base-100 shadow-xl w-full`;
+            createDynamicCard.innerHTML = `
+                <figure><img src="${element.image_url}"
+                class="w-96" alt="Movie" /></figure>
+        <div class="card-body">
+            <h2 class="card-title">${element.title}</h2>
+            <p class="max-w-[826px]">${element.details}</p>
+            <div class="flex justify-between items-center">
+                <div class="card-actions justify-start">
+                    <div class="avatar">
+                        <div class="w-16 rounded-full">
+                          <img src="${element.author.img}" />
+                        </div>
+                      </div>
+                        
                     </div>
-                  </div>
-                    
+                </div>
+                <div class="card-actions justify-end">
+                    <button class="btn text-blue-600 font-semibold"><i
+                            class='bx bx-right-arrow-alt text-3xl'></i></button>
                 </div>
             </div>
-            <div class="card-actions justify-end">
-                <button class="btn text-blue-600 font-semibold"><i
-                        class='bx bx-right-arrow-alt text-3xl'></i></button>
-            </div>
-        </div>
-            `
+                `
             dynamicCardContainer.appendChild(createDynamicCard);
-    });
+        });
+    }
+
 }
-fetchDataByCategory();
+// Show Default Data from the server response
+fetchDataByCategory('01', 'Breaking News');
