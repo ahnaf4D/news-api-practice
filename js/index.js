@@ -3,6 +3,7 @@ const serverResValue = document.getElementById('server-response-value');
 const categoryNames = document.getElementById('category-name');
 const dynamicCardContainer = document.getElementById('dynamic-news-card-container');
 const dataNotFound = document.getElementById('not-found-image');
+
 const fetchCatagories = async () => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/categories`);
     const data = await res.json();
@@ -21,6 +22,7 @@ const displayDynamicBtn = (newsCategories) => {
 }
 fetchCatagories();
 const fetchDataByCategory = async (categoryId, categoryName) => {
+    // searchAction
     const res = await fetch(`https://openapi.programming-hero.com/api/news/category/${categoryId}`);
     const data = await res.json();
     const newsInformations = data.data;
@@ -30,6 +32,14 @@ const fetchDataByCategory = async (categoryId, categoryName) => {
     categoryNames.innerText = categoryName || 'Category name';
     displayCategoriesData(newsInformations);
 }
+// Search Related All Functionality Here
+const searchField = document.getElementById('search-field');
+const searchButton = document.getElementById('search-action');
+searchButton.addEventListener('click', function searchAction(id) {
+    const searchValue = searchField.value;
+    // console.log(searchValue);
+    fetchDataByCategory('02', searchValue);
+})
 const displayCategoriesData = (categoriesData) => {
     dynamicCardContainer.textContent = ' ';
     if (categoriesData.length == 0) {
